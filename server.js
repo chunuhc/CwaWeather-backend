@@ -131,7 +131,7 @@ app.get("/", (req, res) => {
   res.json({
     message: "歡迎使用 CWA 天氣預報 API",
     endpoints: {
-      taiper: "/api/weather/taiper",
+      taipei: "/api/weather/taipei",
       health: "/api/health",
     },
   });
@@ -142,7 +142,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // 取得臺北天氣預報
-app.get("/api/weather/taiper", getTaipeiWeather);
+app.get("/api/weather/taipei", getTaipeiWeather);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
